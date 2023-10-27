@@ -1,21 +1,22 @@
-name: Addition of two numbers
-'on':
+name: Addition of Two Numbers
+
+on:
   push:
     branches:
       - main
+
 jobs:
   build:
-    runs-on:
-      - My_Self_Hosted_Rrunner
-  steps:
-    
+    runs-on: [My_Self_Hosted_Runner]
+
+    steps:
     - name: Checkout code
-      uses: actions/checkout@v3
-   
+      uses: actions/checkout@v2
+      
     - name: Set up Python
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v2 
       with:
         python-version: 3.9
-    
+      
     - name: Run Python code
       run: python add.py

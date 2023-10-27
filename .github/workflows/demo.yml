@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: [My_Self_Hosted_Runner]
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code

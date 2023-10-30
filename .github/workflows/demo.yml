@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
@@ -21,10 +21,10 @@ jobs:
     - name: Run Python code
       run: python add.py
     
-    - name: Set up self-hosted runner
-      uses: actions/runner/setup@v2
-      with:
-        runner-type: self-hosted
-        repository: blackorder11/Actions
-        label: My_Self_Hosted_Runner
-        token: ${{ secrets.GITHUB_TOKEN }}
+  #- name: Set up self-hosted runner
+   # uses: actions/runner/setup@v2
+   # with:
+      #runner-type: self-hosted
+      #repository: blackorder11/Actions
+      #label: My_Self_Hosted_Runner
+      #token: ${{ secrets.GITHUB_TOKEN }}
